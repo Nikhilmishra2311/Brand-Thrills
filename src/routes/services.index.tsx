@@ -1,0 +1,5 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { PageIntro, ServiceGrid, CTA } from '@/components/site';
+import { pageHead } from '@/lib/seo';
+export const Route=createFileRoute('/services/')({head:()=>pageHead('Advertising Services','Explore outdoor and ATL advertising, retail and BTL activations, unconventional marketing, and corporate events with Brand Thrills.'),component:Services});
+function Services(){return <><PageIntro eyebrow="Our services" title="The right idea. Every medium." description="A complete spectrum of advertising and brand experiences. One connected approach, built around your audience."/><section className="section"><div className="wrap"><ServiceGrid/></div></section><section className="statement"><div className="wrap statement-inner"><div><div className="eyebrow">Built around your brand</div><h2>From first thought<br/>to final touchpoint.</h2></div><div><p>Every campaign starts with understanding. We bring together strategy, creative development, media planning, and execution so your brand speaks with one clear voice, wherever it meets its audience.</p></div></div></section><CTA/></>}
